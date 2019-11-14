@@ -31,6 +31,9 @@ while True:
         rightsticky = gamepad.get_axis(1)
         leftsticky = gamepad.get_axis(4)
 
+        LT = gamepad.get_axis(2)
+        RT = gamepad.get_axis(5)
+
         rightstickx = gamepad.get_axis(0)
         leftstickx = gamepad.get_axis(3)
         Start = gamepad.get_button(7)
@@ -62,7 +65,7 @@ while True:
             drone.roll(-1)
         else:
             drone.roll(0)
-        if Y == 1:
+        if LT == 1:
             drone.throttle(1)
         else:
             drone.throttle(0)
@@ -70,3 +73,7 @@ while True:
             drone.throttle(-1)
         else:
             drone.throttle(0)
+        if LT == 1:
+            drone.forward(1)
+        else:
+            drone.forward(0)
