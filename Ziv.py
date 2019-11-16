@@ -65,15 +65,17 @@ while True:
             drone.roll(-1)
         else:
             drone.roll(0)
-        if LT == 1:
+        if y == 1:
             drone.throttle(1)
         else:
             drone.throttle(0)
-        if A == 1:
+        if y == -1:
             drone.throttle(-1)
         else:
             drone.throttle(0)
-        if LT == 1:
-            drone.forward(1)
+        if Y == 1:
+            drone.pitch(1)
         else:
-            drone.forward(0)
+            drone.pitch(0)
+        if A == 1:
+            drone.pitch(-1)
