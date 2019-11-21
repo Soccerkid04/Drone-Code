@@ -31,9 +31,6 @@ while True:
         rightsticky = gamepad.get_axis(1)
         leftsticky = gamepad.get_axis(4)
 
-        LT = gamepad.get_axis(2)
-        RT = gamepad.get_axis(5)
-
         rightstickx = gamepad.get_axis(0)
         leftstickx = gamepad.get_axis(3)
         Start = gamepad.get_button(7)
@@ -79,3 +76,5 @@ while True:
             drone.pitch(0)
         if A == 1:
             drone.pitch(-1)
+        else:
+            drone.pitch(0)
